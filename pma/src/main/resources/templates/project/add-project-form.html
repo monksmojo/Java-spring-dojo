@@ -14,16 +14,17 @@
 </head>
 
 <body>
-    <div class="container">
+    <nav th:replace="layout :: nav-bar"></nav>
+    <div class="container text-warning bg-dark my-2">
         <form action="/project/save" method="post" th:object="${project}">
-            <input type="text" th:field="${project.name}" placeholder="enter the name of the project">
-            <select th:field="${project.stage}">
+            <input class="form-control-md d-block m-3" type="text" th:field="${project.name}" placeholder="enter the name of the project">
+            <select class="form-control-md d-block m-3" th:field="${project.stage}">
                 <option th:value="NotStarted">Not Started</option>
                 <option th:value="InProgress">In Progress</option>
                 <option th:value="Completed">Completed</option>
             </select>
-            <textarea th:field="${project.description}" type="text" placeholder="Description of project" cols="30" rows="10"></textarea>
-            <button type="submit">Create Project</button>
+            <textarea class="form-control-md d-block m-3" th:field="${project.description}" type="text" placeholder="Description of project" ></textarea>
+            <button class="btn btn-warning my-2" type="submit">Create Project</button>
         </form>
     </div>
 </body>

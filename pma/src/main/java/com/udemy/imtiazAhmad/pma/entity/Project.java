@@ -2,17 +2,15 @@ package com.udemy.imtiazAhmad.pma.entity;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 @Getter
 @Setter
-@Entity
 public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
